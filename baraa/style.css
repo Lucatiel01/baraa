@@ -181,6 +181,8 @@ body {
 /* ===== SECTION ===== */
 .section { padding: 5rem 0; }
 
+.section--compact { padding: 3rem 0; }
+
 .section--alt { background: var(--tag-bg); }
 
 .section--contact {
@@ -370,6 +372,57 @@ body {
   font-weight: 500;
 }
 
+/* ===== TESTIMONIALS ===== */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 0.75rem;
+}
+
+.testimonial-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 12px var(--shadow);
+  position: relative;
+}
+
+.testimonial-quote {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: #4a3a2a;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.testimonial-quote::before {
+  content: '\201C';
+  font-size: 2rem;
+  line-height: 0;
+  vertical-align: -0.4rem;
+  color: var(--warm);
+  margin-right: 0.15rem;
+  display: inline;
+  font-style: normal;
+}
+
+[dir="rtl"] .testimonial-quote::before {
+  content: '\201D';
+  margin-right: 0;
+  margin-left: 0.15rem;
+}
+
+.testimonial-author {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--deep);
+}
+
+.testimonial-role {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
 /* ===== NEEDS ===== */
 .needs-grid {
   display: grid;
@@ -494,6 +547,24 @@ body {
 }
 
 .contact-link:hover { color: var(--warm-hv); }
+
+.contact-social {
+  display: flex;
+  gap: 0.3rem;
+  flex-wrap: wrap;
+}
+
+.contact-social-link {
+  color: var(--warm);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.contact-social-link:hover { color: var(--warm-hv); }
+
+.contact-dot { color: rgba(255,255,255,0.2); }
 
 /* ===== FOOTER ===== */
 .footer {
@@ -650,6 +721,12 @@ body {
   [dir="rtl"] .back-to-top { right: auto; left: 1rem; }
 
   .progress-label { font-size: 0.65rem; }
+}
+
+@media (max-width: 480px) {
+  .testimonials-grid { grid-template-columns: 1fr; }
+  .testimonial-card { padding: 1.25rem; }
+  .testimonial-quote { font-size: 0.85rem; }
 }
 
 /* Touch devices: always show gallery captions */

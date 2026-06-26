@@ -23,6 +23,8 @@ const translations = {
     'about-p2':             'Despite limited resources, we run a community school, a small clinic, and a women\'s cooperative. Our goal is simple: survive with dignity and build a future for our children while we wait for peace.',
     'community-title':      'Our Community',
     'community-desc':       'Daily life, resilience, and the spirit of Al-Bara\'a. These are the faces and moments that make our camp a home.',
+    'testimonials-title':   'Voices From the Camp',
+    'testimonials-desc':    'What our community says about life at Al-Bara\'a.',
     'aid-title':            'Aid & Transparency',
     'aid-desc':             'Every delivery, every distribution — documented so you can see exactly how support reaches our community.',
     'needs-title':          'Urgent Needs',
@@ -47,6 +49,7 @@ const translations = {
     'contact-phone-value':  '+963 9XX XXX XXX',
     'contact-loc-label':    'Location',
     'contact-loc-value':    'Northwest Syria',
+    'contact-social-label': 'Follow Us',
     'footer-tagline':       'Built by the community, for the community.',
     'map-credit':           'Location: Northwest Syria',
   },
@@ -70,6 +73,8 @@ const translations = {
     'about-p2':             'رغم الموارد المحدودة، ندير مدرسة مجتمعية، عيادة صغيرة، وتعاونية نسائية. هدفنا بسيط: العيش بكرامة وبناء مستقبل لأطفالنا بينما ننتظر السلام.',
     'community-title':      'مجتمعنا',
     'community-desc':       'الحياة اليومية، الصمود، وروح مخيم البراء. هذه هي الوجوه واللحظات التي تجعل مخيمنا وطناً.',
+    'testimonials-title':   'صوت من المخيم',
+    'testimonials-desc':    'ما يقوله مجتمعنا عن الحياة في مخيم البراء.',
     'aid-title':            'المساعدات والشفافية',
     'aid-desc':             'كل شحنة، كل توزيع — موثق لترى بالضبط كيف يصل الدعم إلى مجتمعنا.',
     'needs-title':          'احتياجات عاجلة',
@@ -94,6 +99,7 @@ const translations = {
     'contact-phone-value':  '+963 9XX XXX XXX',
     'contact-loc-label':    'الموقع',
     'contact-loc-value':    'شمال غرب سوريا',
+    'contact-social-label': 'تابعنا',
     'footer-tagline':       'بُني من قبل المجتمع، لأجل المجتمع.',
     'map-credit':           'الموقع: شمال غرب سوريا',
   },
@@ -118,6 +124,16 @@ const aidDeliveries = [
   { src: '', caption: { en: 'Medical supplies delivered to the camp clinic — antibiotics & first-aid kits', ar: 'وصول مستلزمات طبية إلى عيادة المخيم — مضادات حيوية وحقائب إسعاف أولي' }, date: 'May 2026' },
   { src: '', caption: { en: 'Winter blanket distribution — 200 thermal blankets to families with young children', ar: 'توزيع بطانيات شتوية — ٢٠٠ بطانية حرارية للعائلات التي لديها أطفال صغار' }, date: 'Dec 2025' },
   { src: '', caption: { en: 'Water trucking: 15,000L of clean drinking water delivered', ar: 'توزيع ١٥٠٠٠ لتر من مياه الشرب النظيفة' }, date: 'Mar 2026' },
+];
+
+// ================================================================
+//  EDIT TESTIMONIALS (add or remove quotes)
+// ================================================================
+
+const testimonials = [
+  { quote: { en: 'Before the school opened, my children had nowhere to go. Now they learn, play, and dream again.', ar: 'قبل افتتاح المدرسة، لم يكن لأطفالي مكان يذهبون إليه. الآن يتعلمون ويلعبون ويحلمون من جديد.' }, name: { en: 'Umm Khalid', ar: 'أم خالد' }, role: { en: 'Mother of four', ar: 'أم لأربعة أطفال' } },
+  { quote: { en: 'The women\'s cooperative gave us a way to earn and support our families with dignity.', ar: 'التعاونية النسائية أعطتنا وسيلة لكسب العيش ودعم عائلاتنا بكرامة.' }, name: { en: 'Layla', ar: 'ليلى' }, role: { en: 'Cooperative member', ar: 'عضوة في التعاونية' } },
+  { quote: { en: 'When the aid trucks arrive, you see hope on every face. It reminds us we are not forgotten.', ar: 'عندما تصل شاحنات المساعدات، ترى الأمل على كل وجه. يذكرنا أننا لسنا منسيين.' }, name: { en: 'Abu Ahmad', ar: 'أبو أحمد' }, role: { en: 'Camp elder', ar: 'شيخ المخيم' } },
 ];
 
 // ================================================================
@@ -195,6 +211,55 @@ function renderProgressBars(lang) {
   });
 }
 
+// ================================================================
+//  RENDER TESTIMONIALS
+// ================================================================
+
+function renderTestimonials(lang) {
+  const grid = document.getElementById('testimonialsGrid');
+  if (!grid) return;
+  grid.innerHTML = testimonials.map(t => `
+    <div class="testimonial-card">
+      <p class="testimonial-quote">${t.quote[lang] || t.quote.en}</p>
+      <div class="testimonial-author">${t.name[lang] || t.name.en}</div>
+      <div class="testimonial-role">${t.role[lang] || t.role.en}</div>
+    </div>
+  `).join('');
+}
+
+// ================================================================
+//  ANIMATE STAT COUNTERS
+// ================================================================
+
+let statsAnimated = false;
+
+function animateStats() {
+  if (statsAnimated) return;
+  statsAnimated = true;
+  document.querySelectorAll('.stat-num').forEach(el => {
+    const target = parseInt(el.dataset.target);
+    const suffix = el.dataset.suffix || '';
+    if (isNaN(target)) return;
+
+    // Year stat: show instantly
+    if (target > 1000) {
+      el.textContent = target + suffix;
+      return;
+    }
+
+    const duration = 1500;
+    const start = performance.now();
+    function step(now) {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - (1 - progress) * (1 - progress);
+      el.textContent = Math.round(eased * target) + suffix;
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  });
+}
+
 function animateProgressBars() {
   document.querySelectorAll('.progress-fill').forEach(fill => {
     if (fill.dataset.target) {
@@ -236,6 +301,9 @@ function setLanguage(lang) {
 
   // Re-render galleries with new language
   renderGalleries(lang);
+
+  // Re-render testimonials with new language
+  renderTestimonials(lang);
 
   // Update progress bars
   renderProgressBars(lang);
@@ -355,4 +423,12 @@ document.getElementById('langToggle').addEventListener('click', () => {
     el.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
     observer.observe(el);
   });
+
+  // Trigger stat counters when hero is visible
+  const heroObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) animateStats();
+    });
+  }, { threshold: 0.3 });
+  heroObserver.observe(document.getElementById('hero'));
 })();
