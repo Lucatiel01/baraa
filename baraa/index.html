@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="page-title">مخيم البراء — Al-Bara'a Camp</title>
+  <meta property="og:title" content="مخيم البراء — Al-Bara'a Camp">
+  <meta property="og:description" content="A community of 3,200+ displaced people in northwest Syria. Dignity. Resilience. Hope. — We need your support.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=1200&q=80">
+  <meta property="og:url" content=""><!-- Set to your domain when deployed -->
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="مخيم البراء — Al-Bara'a Camp">
+  <meta name="twitter:description" content="A community of 3,200+ displaced people in northwest Syria. Dignity. Resilience. Hope. — We need your support.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=1200&q=80">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Naskh+Arabic:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== HERO BANNER ===== -->
+  <header class="hero" id="hero">
+    <div class="hero-overlay"></div>
+    <nav class="topnav">
+      <span class="topnav-logo">مخيم البراء</span>
+      <div class="topnav-links">
+        <a href="#about" data-i18n="nav-about">About</a>
+        <a href="#community" data-i18n="nav-community">Community</a>
+        <a href="#aid" data-i18n="nav-aid">Aid</a>
+        <a href="#needs" data-i18n="nav-needs">Needs</a>
+        <a href="#contact" data-i18n="nav-contact">Contact</a>
+        <button class="lang-toggle" id="langToggle" aria-label="Switch language">AR</button>
+      </div>
+    </nav>
+    <div class="hero-content">
+      <h1 class="hero-title">
+        <span class="hero-ar">مخيم البراء</span>
+        <span class="hero-sub" data-i18n="hero-sub">Al-Bara'a Camp</span>
+      </h1>
+      <p class="hero-tagline" data-i18n="hero-tagline">Dignity. Resilience. Hope. — A community standing together.</p>
+      <a href="#contact" class="hero-cta" data-i18n="hero-cta">Partner With Us</a>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num" id="stat-1">3,200+</span><span class="stat-label" data-i18n="stat-residents">Residents</span></div>
+        <div class="stat"><span class="stat-num" id="stat-2">60%</span><span class="stat-label" data-i18n="stat-youth">Children &amp; Youth</span></div>
+        <div class="stat"><span class="stat-num" id="stat-3">147</span><span class="stat-label" data-i18n="stat-families">Families</span></div>
+        <div class="stat"><span class="stat-num" id="stat-4">2024</span><span class="stat-label" data-i18n="stat-est">Established</span></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section" id="about">
+    <div class="container">
+      <h2 class="sec-title" data-i18n="about-title">Who We Are</h2>
+      <div class="about-wrap">
+        <div class="about-text">
+          <p><strong class="about-ar">مخيم البراء</strong><span data-i18n="about-p1"> — Al-Bara'a Camp is home to over 3,200 displaced people living in northwest Syria. We are farmers, teachers, artisans, and students — a community that refuses to be defined by displacement.</span></p>
+          <p data-i18n="about-p2">Despite limited resources, we run a community school, a small clinic, and a women's cooperative. Our goal is simple: survive with dignity and build a future for our children while we wait for peace.</p>
+        </div>
+        <div class="about-img" aria-label="Community photo"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COMMUNITY GALLERY ===== -->
+  <section class="section section--alt" id="community">
+    <div class="container">
+      <h2 class="sec-title"><span data-i18n="community-title">Our Community</span> <span class="sec-title-ar">— الحياة في المخيم</span></h2>
+      <p class="sec-desc" data-i18n="community-desc">Daily life, resilience, and the spirit of Al-Bara'a. These are the faces and moments that make our camp a home.</p>
+      <div class="gallery" id="communityGallery"></div>
+    </div>
+  </section>
+
+  <!-- ===== AID & TRANSPARENCY ===== -->
+  <section class="section" id="aid">
+    <div class="container">
+      <h2 class="sec-title" data-i18n="aid-title">Aid &amp; Transparency</h2>
+      <p class="sec-desc" data-i18n="aid-desc">Every delivery, every distribution — documented so you can see exactly how support reaches our community.</p>
+      <div class="aid-grid" id="aidGallery"></div>
+    </div>
+  </section>
+
+  <!-- ===== URGENT NEEDS ===== -->
+  <section class="section section--alt" id="needs">
+    <div class="container">
+      <h2 class="sec-title" data-i18n="needs-title">Urgent Needs</h2>
+      <p class="sec-desc" data-i18n="needs-desc">These are our most critical shortages right now. Any support — large or small — makes a difference.</p>
+      <div class="needs-grid">
+        <div class="need-card need-card--critical">
+          <div class="need-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-14 0Z"/></svg></div>
+          <h3 data-i18n="need-1-title">Medical Supplies</h3>
+          <p data-i18n="need-1-desc">Our clinic is out of basic antibiotics, painkillers, and chronic-disease medication. 1 in 3 children has not received routine vaccinations.</p>
+          <div class="progress-wrap" data-need="0"><div class="progress-bar"><div class="progress-fill"></div></div><span class="progress-label"></span></div>
+        </div>
+        <div class="need-card need-card--high">
+          <div class="need-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z"/><path d="M3 9V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4"/><path d="M8 15h8"/><path d="M12 11v8"/></svg></div>
+          <h3 data-i18n="need-2-title">Winter Tents &amp; Blankets</h3>
+          <p data-i18n="need-2-desc">Winter temperatures drop below freezing. Over 200 families lack proper thermal blankets or waterproof tent sheeting.</p>
+          <div class="progress-wrap" data-need="1"><div class="progress-bar"><div class="progress-fill"></div></div><span class="progress-label"></span></div>
+        </div>
+        <div class="need-card need-card--high">
+          <div class="need-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6Z"/><path d="M2 6l10 8 10-8"/></svg></div>
+          <h3 data-i18n="need-3-title">Education Materials</h3>
+          <p data-i18n="need-3-desc">Our school serves 400+ children but lacks textbooks, notebooks, and basic classroom supplies. Teachers work without salaries.</p>
+          <div class="progress-wrap" data-need="2"><div class="progress-bar"><div class="progress-fill"></div></div><span class="progress-label"></span></div>
+        </div>
+        <div class="need-card need-card--medium">
+          <div class="need-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg></div>
+          <h3 data-i18n="need-4-title">Clean Water Infrastructure</h3>
+          <p data-i18n="need-4-desc">The camp's water trucking is inconsistent. A solar-powered well and filtration system would serve the entire camp.</p>
+          <div class="progress-wrap" data-need="3"><div class="progress-bar"><div class="progress-fill"></div></div><span class="progress-label"></span></div>
+        </div>
+        <div class="need-card need-card--medium">
+          <div class="need-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          <h3 data-i18n="need-5-title">Psychosocial Support</h3>
+          <p data-i18n="need-5-desc">War and displacement have taken a heavy toll. We need trained counselors and safe spaces for children and women.</p>
+          <div class="progress-wrap" data-need="4"><div class="progress-bar"><div class="progress-fill"></div></div><span class="progress-label"></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section section--contact" id="contact">
+    <div class="container">
+      <h2 class="sec-title sec-title--light" data-i18n="contact-title">Partner With Us</h2>
+      <p class="sec-desc sec-desc--light" data-i18n="contact-desc">If your organization can help — or if you want to learn more about our situation — please reach out. Transparency and partnership are our foundation.</p>
+      <div class="contact-card">
+        <div class="contact-method">
+          <span class="contact-label" data-i18n="contact-rep-label">Camp Representative</span>
+          <span class="contact-value" data-i18n="contact-rep-value">Ahmad Al-Hassan</span>
+        </div>
+        <div class="contact-method">
+          <span class="contact-label" data-i18n="contact-email-label">Email</span>
+          <a href="mailto:info@albaracamp.org" class="contact-value contact-link" data-i18n="contact-email-value">info@albaracamp.org</a>
+        </div>
+        <div class="contact-method">
+          <span class="contact-label" data-i18n="contact-phone-label">Signal / WhatsApp</span>
+          <span class="contact-value" data-i18n="contact-phone-value">+963 9XX XXX XXX</span>
+        </div>
+        <div class="contact-method">
+          <span class="contact-label" data-i18n="contact-loc-label">Location</span>
+          <span class="contact-value" data-i18n="contact-loc-value">Northwest Syria</span>
+        </div>
+      </div>
+      <div class="map-wrap">
+        <div id="map"></div>
+        <p class="map-credit" data-i18n="map-credit">Location: Northwest Syria</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <p>مخيم البراء · Al-Bara'a Camp</p>
+    <p class="footer-small" data-i18n="footer-tagline">Built by the community, for the community.</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

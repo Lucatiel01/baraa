@@ -1,0 +1,358 @@
+// ================================================================
+//  TRANSLATIONS
+// ================================================================
+
+const translations = {
+  en: {
+    'page-title':           'مخيم البراء — Al-Bara\'a Camp',
+    'nav-about':            'About',
+    'nav-community':        'Community',
+    'nav-aid':              'Aid',
+    'nav-needs':            'Needs',
+    'nav-contact':          'Contact',
+    'hero-sub':             "Al-Bara'a Camp",
+    'hero-tagline':         'Dignity. Resilience. Hope. — A community standing together.',
+    'hero-cta':             'Partner With Us',
+    'stat-residents':       'Residents',
+    'stat-youth':           'Children & Youth',
+    'stat-families':        'Families',
+    'stat-est':             'Established',
+    'about-title':          'Who We Are',
+    'about-placeholder':    'Your Photo Here',
+    'about-p1':             ' — Al-Bara\'a Camp is home to over 3,200 displaced people living in northwest Syria. We are farmers, teachers, artisans, and students — a community that refuses to be defined by displacement.',
+    'about-p2':             'Despite limited resources, we run a community school, a small clinic, and a women\'s cooperative. Our goal is simple: survive with dignity and build a future for our children while we wait for peace.',
+    'community-title':      'Our Community',
+    'community-desc':       'Daily life, resilience, and the spirit of Al-Bara\'a. These are the faces and moments that make our camp a home.',
+    'aid-title':            'Aid & Transparency',
+    'aid-desc':             'Every delivery, every distribution — documented so you can see exactly how support reaches our community.',
+    'needs-title':          'Urgent Needs',
+    'needs-desc':           'These are our most critical shortages right now. Any support — large or small — makes a difference.',
+    'need-1-title':         'Medical Supplies',
+    'need-1-desc':          'Our clinic is out of basic antibiotics, painkillers, and chronic-disease medication. 1 in 3 children has not received routine vaccinations.',
+    'need-2-title':         'Winter Tents & Blankets',
+    'need-2-desc':          'Winter temperatures drop below freezing. Over 200 families lack proper thermal blankets or waterproof tent sheeting.',
+    'need-3-title':         'Education Materials',
+    'need-3-desc':          'Our school serves 400+ children but lacks textbooks, notebooks, and basic classroom supplies. Teachers work without salaries.',
+    'need-4-title':         'Clean Water Infrastructure',
+    'need-4-desc':          'The camp\'s water trucking is inconsistent. A solar-powered well and filtration system would serve the entire camp.',
+    'need-5-title':         'Psychosocial Support',
+    'need-5-desc':          'War and displacement have taken a heavy toll. We need trained counselors and safe spaces for children and women.',
+    'contact-title':        'Partner With Us',
+    'contact-desc':         'If your organization can help — or if you want to learn more about our situation — please reach out. Transparency and partnership are our foundation.',
+    'contact-rep-label':    'Camp Representative',
+    'contact-rep-value':    'Ahmad Al-Hassan',
+    'contact-email-label':  'Email',
+    'contact-email-value':  'info@albaracamp.org',
+    'contact-phone-label':  'Signal / WhatsApp',
+    'contact-phone-value':  '+963 9XX XXX XXX',
+    'contact-loc-label':    'Location',
+    'contact-loc-value':    'Northwest Syria',
+    'footer-tagline':       'Built by the community, for the community.',
+    'map-credit':           'Location: Northwest Syria',
+  },
+  ar: {
+    'page-title':           'مخيم البراء',
+    'nav-about':            'عن المخيم',
+    'nav-community':        'المجتمع',
+    'nav-aid':              'المساعدات',
+    'nav-needs':            'الاحتياجات',
+    'nav-contact':          'اتصل',
+    'hero-sub':             'مخيم البراء',
+    'hero-tagline':         'كرامة. صمود. أمل. — مجتمع يقف معاً',
+    'hero-cta':             'شاركنا',
+    'stat-residents':       'نسمة',
+    'stat-youth':           'أطفال وشباب',
+    'stat-families':        'عائلة',
+    'stat-est':             'تأسس',
+    'about-title':          'من نحن',
+    'about-placeholder':    'ضع صورتك هنا',
+    'about-p1':             ' موطن لأكثر من ٣٢٠٠ نازح يعيشون في شمال غرب سوريا. نحن مزارعون، معلمون، حرفيون، وطلاب — مجتمع يرفض أن يُعرّف بالنزوح.',
+    'about-p2':             'رغم الموارد المحدودة، ندير مدرسة مجتمعية، عيادة صغيرة، وتعاونية نسائية. هدفنا بسيط: العيش بكرامة وبناء مستقبل لأطفالنا بينما ننتظر السلام.',
+    'community-title':      'مجتمعنا',
+    'community-desc':       'الحياة اليومية، الصمود، وروح مخيم البراء. هذه هي الوجوه واللحظات التي تجعل مخيمنا وطناً.',
+    'aid-title':            'المساعدات والشفافية',
+    'aid-desc':             'كل شحنة، كل توزيع — موثق لترى بالضبط كيف يصل الدعم إلى مجتمعنا.',
+    'needs-title':          'احتياجات عاجلة',
+    'needs-desc':           'هذه هي أهم النواقص الحرجة حالياً. أي دعم — كبيراً كان أم صغيراً — يُحدث فرقاً.',
+    'need-1-title':         'مستلزمات طبية',
+    'need-1-desc':          'عيادتنا تفتقر للمضادات الحيوية الأساسية، مسكنات الألم، وأدوية الأمراض المزمنة. طفل من كل ٣ لم يتلق التطعيمات الروتينية.',
+    'need-2-title':         'خيام شتوية وبطانيات',
+    'need-2-desc':          'درجات الحرارة في الشتاء تنزل تحت الصفر. أكثر من ٢٠٠ عائلة تفتقر إلى بطانيات حرارية أو أغطية خيام مقاومة للماء.',
+    'need-3-title':         'مواد تعليمية',
+    'need-3-desc':          'مدرستنا تخدم أكثر من ٤٠٠ طفل ولكنها تفتقر إلى الكتب المدرسية والدفاتر واللوازم الصفية الأساسية. المعلمون يعملون بدون رواتب.',
+    'need-4-title':         'بنية تحتية للمياه النظيفة',
+    'need-4-desc':          'نقل المياه إلى المخيم غير منتظم. بئر يعمل بالطاقة الشمسية ونظام ترشيح يمكن أن يخدم المخيم بأكمله.',
+    'need-5-title':         'دعم نفسي واجتماعي',
+    'need-5-desc':          'الحرب والنزوح تركا آثاراً عميقة. نحتاج إلى مرشدين مدربين ومساحات آمنة للأطفال والنساء.',
+    'contact-title':        'شاركنا',
+    'contact-desc':         'إذا كانت مؤسستك تستطيع المساعدة — أو إذا كنت ترغب في معرفة المزيد عن وضعنا — تواصل معنا. الشفافية والشراكة هما أساسنا.',
+    'contact-rep-label':    'ممثل المخيم',
+    'contact-rep-value':    'أحمد الحسن',
+    'contact-email-label':  'البريد الإلكتروني',
+    'contact-email-value':  'info@albaracamp.org',
+    'contact-phone-label':  'سيغنال / واتساب',
+    'contact-phone-value':  '+963 9XX XXX XXX',
+    'contact-loc-label':    'الموقع',
+    'contact-loc-value':    'شمال غرب سوريا',
+    'footer-tagline':       'بُني من قبل المجتمع، لأجل المجتمع.',
+    'map-credit':           'الموقع: شمال غرب سوريا',
+  },
+};
+
+// ================================================================
+//  EDIT YOUR GALLERY PHOTOS HERE
+//  { src: '', caption: { en: '...', ar: '...' } }
+// ================================================================
+
+const communityPhotos = [
+  { src: '', caption: { en: 'Morning assembly at the camp school', ar: 'طابور الصباح في مدرسة المخيم' } },
+  { src: '', caption: { en: 'Women\'s cooperative — sewing and embroidery', ar: 'تعاونية نسائية — خياطة وتطريز' } },
+  { src: '', caption: { en: 'Children playing in the common area', ar: 'أطفال يلعبون في الساحة المشتركة' } },
+  { src: '', caption: { en: 'Harvesting olives on the outskirts', ar: 'قطف الزيتون في أطراف المخيم' } },
+  { src: '', caption: { en: 'Eid celebration with the whole camp', ar: 'احتفال العيد مع المخيم كاملاً' } },
+  { src: '', caption: { en: 'Teenagers at the community library', ar: 'شباب في مكتبة المجتمع' } },
+];
+
+const aidDeliveries = [
+  { src: '', caption: { en: 'Distribution of 350 food parcels to families in Sectors 1-3', ar: 'توزيع ٣٥٠ سلة غذائية على العائلات في القطاعات ١-٣' }, date: 'June 2026' },
+  { src: '', caption: { en: 'Medical supplies delivered to the camp clinic — antibiotics & first-aid kits', ar: 'وصول مستلزمات طبية إلى عيادة المخيم — مضادات حيوية وحقائب إسعاف أولي' }, date: 'May 2026' },
+  { src: '', caption: { en: 'Winter blanket distribution — 200 thermal blankets to families with young children', ar: 'توزيع بطانيات شتوية — ٢٠٠ بطانية حرارية للعائلات التي لديها أطفال صغار' }, date: 'Dec 2025' },
+  { src: '', caption: { en: 'Water trucking: 15,000L of clean drinking water delivered', ar: 'توزيع ١٥٠٠٠ لتر من مياه الشرب النظيفة' }, date: 'Mar 2026' },
+];
+
+// ================================================================
+//  EDIT NEEDS PROGRESS (percent covered for each urgent need)
+// ================================================================
+
+const needsProgress = [
+  { pct: 15, label: { en: 'covered', ar: 'مغطى' } },
+  { pct: 8,  label: { en: 'covered', ar: 'مغطى' } },
+  { pct: 20, label: { en: 'covered', ar: 'مغطى' } },
+  { pct: 5,  label: { en: 'covered', ar: 'مغطى' } },
+  { pct: 3,  label: { en: 'covered', ar: 'مغطى' } },
+];
+
+// ================================================================
+//  LANGUAGE STATE
+// ================================================================
+
+let currentLang = localStorage.getItem('albarra-lang') || 'en';
+
+// ================================================================
+//  HELPERS
+// ================================================================
+
+function placeholderGradient(index) {
+  const hues = [20, 30, 40, 350, 10, 25];
+  const h = hues[index % hues.length];
+  return `linear-gradient(135deg, hsl(${h}, 40%, 55%), hsl(${h + 15}, 35%, 45%))`;
+}
+
+// ================================================================
+//  RENDER GALLERIES
+// ================================================================
+
+function renderGalleries(lang) {
+  // --- Community Gallery ---
+  const commContainer = document.getElementById('communityGallery');
+  if (commContainer) {
+    commContainer.innerHTML = communityPhotos.map((photo, i) => {
+      const caption = photo.caption[lang] || photo.caption.en;
+      const img = photo.src
+        ? `<img src="${photo.src}" alt="${caption}" loading="lazy">`
+        : `<div class="gallery-placeholder" style="background:${placeholderGradient(i)}">${translations[lang]['about-placeholder'] || 'Your Photo'}</div>`;
+      return `<div class="gallery-item" tabindex="0">${img}<div class="gallery-caption">${caption}</div></div>`;
+    }).join('');
+  }
+
+  // --- Aid & Transparency Tracker ---
+  const aidContainer = document.getElementById('aidGallery');
+  if (aidContainer) {
+    aidContainer.innerHTML = aidDeliveries.map((item, i) => {
+      const caption = item.caption[lang] || item.caption.en;
+      const img = item.src
+        ? `<img class="aid-card-img" src="${item.src}" alt="${caption}" loading="lazy">`
+        : `<div class="aid-placeholder" style="background:${placeholderGradient(i + 10)}">${translations[lang]['about-placeholder'] || 'Your Photo'}</div>`;
+      return `<div class="aid-card">${img}<div class="aid-card-body"><span class="aid-card-date">${item.date}</span><p>${caption}</p></div></div>`;
+    }).join('');
+  }
+}
+
+// ================================================================
+//  RENDER PROGRESS BARS
+// ================================================================
+
+function renderProgressBars(lang) {
+  document.querySelectorAll('.progress-wrap').forEach(el => {
+    const idx = parseInt(el.dataset.need);
+    const prog = needsProgress[idx];
+    if (!prog) return;
+    const fill = el.querySelector('.progress-fill');
+    const label = el.querySelector('.progress-label');
+    fill.dataset.target = prog.pct;
+    fill.style.width = '0';
+    label.textContent = `${prog.pct}% ${prog.label[lang] || prog.label.en}`;
+  });
+}
+
+function animateProgressBars() {
+  document.querySelectorAll('.progress-fill').forEach(fill => {
+    if (fill.dataset.target) {
+      fill.style.width = fill.dataset.target + '%';
+    }
+  });
+}
+
+// ================================================================
+//  SET LANGUAGE
+// ================================================================
+
+function setLanguage(lang) {
+  currentLang = lang;
+  localStorage.setItem('albarra-lang', lang);
+
+  const html = document.documentElement;
+  html.lang = lang === 'ar' ? 'ar' : 'en';
+  html.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+  // Translate static elements
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.dataset.i18n;
+    if (translations[lang] && translations[lang][key]) {
+      el.textContent = translations[lang][key];
+    }
+  });
+
+  // Translate the about-img placeholder label
+  const aboutImg = document.querySelector('.about-img');
+  if (aboutImg) {
+    const label = translations[lang]['about-placeholder'];
+    aboutImg.dataset.label = label;
+  }
+
+  // Update language toggle text
+  const toggle = document.getElementById('langToggle');
+  if (toggle) toggle.textContent = lang === 'en' ? 'AR' : 'EN';
+
+  // Re-render galleries with new language
+  renderGalleries(lang);
+
+  // Update progress bars
+  renderProgressBars(lang);
+}
+
+// ================================================================
+//  INIT
+// ================================================================
+
+setLanguage(currentLang);
+
+// --- Language toggle ---
+document.getElementById('langToggle').addEventListener('click', () => {
+  setLanguage(currentLang === 'en' ? 'ar' : 'en');
+});
+
+// ================================================================
+//  LIGHTBOX
+// ================================================================
+
+(function setupLightbox() {
+  const lb = document.createElement('div');
+  lb.className = 'lightbox';
+  lb.innerHTML = '<button class="lightbox-close">&times;</button><img alt="">';
+  document.body.appendChild(lb);
+
+  const lbImg = lb.querySelector('img');
+  const lbClose = lb.querySelector('.lightbox-close');
+
+  document.addEventListener('click', (e) => {
+    const item = e.target.closest('.gallery-item');
+    if (!item) return;
+    const img = item.querySelector('img');
+    if (!img || !img.src) return;
+    lbImg.src = img.src;
+    lbImg.alt = img.alt || '';
+    lb.classList.add('open');
+  });
+
+  lb.addEventListener('click', () => lb.classList.remove('open'));
+  lbClose.addEventListener('click', (e) => { e.stopPropagation(); lb.classList.remove('open'); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') lb.classList.remove('open'); });
+})();
+
+// ================================================================
+//  MAP
+// ================================================================
+
+(function initMap() {
+  const mapEl = document.getElementById('map');
+  if (!mapEl || typeof L === 'undefined') return;
+
+  // Northwest Syria (general area — adjust coordinates as needed)
+  const lat = 35.93;
+  const lng = 36.76;
+
+  const map = L.map(mapEl, {
+    center: [lat, lng],
+    zoom: 8,
+    scrollWheelZoom: false,
+    zoomControl: true,
+  });
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    maxZoom: 18,
+  }).addTo(map);
+
+  L.marker([lat, lng])
+    .addTo(map)
+    .bindPopup('مخيم البراء · Al-Bara\'a Camp');
+
+  // Ensure map renders correctly after section scroll-reveal
+  setTimeout(() => map.invalidateSize(), 500);
+})();
+
+// ================================================================
+//  BACK TO TOP
+// ================================================================
+
+(function setupBackToTop() {
+  const btn = document.createElement('button');
+  btn.className = 'back-to-top';
+  btn.setAttribute('aria-label', 'Back to top');
+  btn.innerHTML = '↑';
+  document.body.appendChild(btn);
+
+  window.addEventListener('scroll', () => {
+    btn.classList.toggle('show', window.scrollY > 500);
+  }, { passive: true });
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();
+
+// ================================================================
+//  SCROLL REVEAL
+// ================================================================
+
+(function setupScrollReveal() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+        if (entry.target.id === 'needs') {
+          animateProgressBars();
+        }
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.section').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(24px)';
+    el.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
+    observer.observe(el);
+  });
+})();
