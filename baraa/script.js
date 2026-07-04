@@ -19,8 +19,7 @@ const translations = {
     'stat-est':             'Established',
     'about-title':          'Who We Are',
     'about-placeholder':    'Your Photo Here',
-    'about-p1':             ' — Al-Bara\'a Camp is home to over 3,200 displaced people living in northwest Syria. We are farmers, teachers, artisans, and students — a community that refuses to be defined by displacement.',
-    'about-p2':             'Despite limited resources, we run a community school, a small clinic, and a women\'s cooperative. Our goal is simple: survive with dignity and build a future for our children while we wait for peace.',
+    'about-p1':             ' — Al-Bara\'a Camp is home to over 756 displaced people living in Gaza. We are farmers, teachers, artisans, and students — a community that refuses to be defined by displacement. Despite limited resources, we run a tight-knit community. Our goal is simple: survive with dignity and build a future for our children while we wait for peace.',
     'community-title':      'Our Community',
     'community-desc':       'Daily life, resilience, and the spirit of Al-Bara\'a. These are the faces and moments that make our camp a home.',
     'testimonials-title':   'Voices From the Camp',
@@ -42,16 +41,16 @@ const translations = {
     'contact-title':        'Partner With Us',
     'contact-desc':         'If your organization can help — or if you want to learn more about our situation — please reach out. Transparency and partnership are our foundation.',
     'contact-rep-label':    'Camp Representative',
-    'contact-rep-value':    'Ahmad Al-Hassan',
+    'contact-rep-value':    'Abu Ali Al-Astal',
     'contact-email-label':  'Email',
     'contact-email-value':  'info@albaracamp.org',
     'contact-phone-label':  'Signal / WhatsApp',
     'contact-phone-value':  '+963 9XX XXX XXX',
     'contact-loc-label':    'Location',
-    'contact-loc-value':    'Northwest Syria',
+    'contact-loc-value':    'Khan Younis, south of Street 5, 50m in',
     'contact-social-label': 'Follow Us',
     'footer-tagline':       'Built by the community, for the community.',
-    'map-credit':           'Location: Northwest Syria',
+    'map-credit':           'Location: 40m inside the sandy road, after Al-Biko Chalet, opposite Shahd Hall',
   },
   ar: {
     'page-title':           'مخيم البراء',
@@ -69,8 +68,7 @@ const translations = {
     'stat-est':             'تأسس',
     'about-title':          'من نحن',
     'about-placeholder':    'ضع صورتك هنا',
-    'about-p1':             ' موطن لأكثر من ٣٢٠٠ نازح يعيشون في شمال غرب سوريا. نحن مزارعون، معلمون، حرفيون، وطلاب — مجتمع يرفض أن يُعرّف بالنزوح.',
-    'about-p2':             'رغم الموارد المحدودة، ندير مدرسة مجتمعية، عيادة صغيرة، وتعاونية نسائية. هدفنا بسيط: العيش بكرامة وبناء مستقبل لأطفالنا بينما ننتظر السلام.',
+    'about-p1':             ' — موطن لأكثر من ٧٥٦ نازحاً في غزة. نحن مزارعون، معلمون، حرفيون، وطلاب — مجتمع يرفض أن يُعرّف بالنزوح. رغم الموارد المحدودة، ندير مجتمعاً متماسكاً. هدفنا بسيط: العيش بكرامة وبناء مستقبل لأطفالنا بينما ننتظر السلام.',
     'community-title':      'مجتمعنا',
     'community-desc':       'الحياة اليومية، الصمود، وروح مخيم البراء. هذه هي الوجوه واللحظات التي تجعل مخيمنا وطناً.',
     'testimonials-title':   'صوت من المخيم',
@@ -92,16 +90,16 @@ const translations = {
     'contact-title':        'شاركنا',
     'contact-desc':         'إذا كانت مؤسستك تستطيع المساعدة — أو إذا كنت ترغب في معرفة المزيد عن وضعنا — تواصل معنا. الشفافية والشراكة هما أساسنا.',
     'contact-rep-label':    'ممثل المخيم',
-    'contact-rep-value':    'أحمد الحسن',
+    'contact-rep-value':    'أبو علي الاسطل',
     'contact-email-label':  'البريد الإلكتروني',
     'contact-email-value':  'info@albaracamp.org',
     'contact-phone-label':  'سيغنال / واتساب',
     'contact-phone-value':  '+963 9XX XXX XXX',
     'contact-loc-label':    'الموقع',
-    'contact-loc-value':    'شمال غرب سوريا',
+    'contact-loc-value':    'مواصي خانيونس جنوب شارع خمسة ب50 متر',
     'contact-social-label': 'تابعنا',
     'footer-tagline':       'بُني من قبل المجتمع، لأجل المجتمع.',
-    'map-credit':           'الموقع: شمال غرب سوريا',
+    'map-credit':           'الموقع:40 متر داخل الشارع الرملي بعد شاليه البيكو امام صالة شهد',
   },
 };
 
@@ -111,19 +109,19 @@ const translations = {
 // ================================================================
 
 const communityPhotos = [
-  { src: '', caption: { en: 'Morning assembly at the camp school', ar: 'طابور الصباح في مدرسة المخيم' } },
-  { src: '', caption: { en: 'Women\'s cooperative — sewing and embroidery', ar: 'تعاونية نسائية — خياطة وتطريز' } },
-  { src: '', caption: { en: 'Children playing in the common area', ar: 'أطفال يلعبون في الساحة المشتركة' } },
-  { src: '', caption: { en: 'Harvesting olives on the outskirts', ar: 'قطف الزيتون في أطراف المخيم' } },
-  { src: '', caption: { en: 'Eid celebration with the whole camp', ar: 'احتفال العيد مع المخيم كاملاً' } },
-  { src: '', caption: { en: 'Teenagers at the community library', ar: 'شباب في مكتبة المجتمع' } },
+  { src: ['images/volly.jpg'], caption: { en: 'the youth playing vollyball', ar: 'كرة الطائرة' } },
+  { src: ['images/kids.jpg'], caption: { en: 'kids and teens', ar: 'اطفال و شباب' } },
+  { src: [], caption: { en: 'Children playing in the common area', ar: 'أطفال يلعبون في الساحة المشتركة' } },
+  { src: [], caption: { en: 'Harvesting olives on the outskirts', ar: 'قطف الزيتون في أطراف المخيم' } },
+  { src: [], caption: { en: 'Eid celebration with the whole camp', ar: 'احتفال العيد مع المخيم كاملاً' } },
+  { src: [], caption: { en: 'Teenagers at the community library', ar: 'شباب في مكتبة المجتمع' } },
 ];
 
 const aidDeliveries = [
-  { src: '', caption: { en: 'Distribution of 350 food parcels to families in Sectors 1-3', ar: 'توزيع ٣٥٠ سلة غذائية على العائلات في القطاعات ١-٣' }, date: 'June 2026' },
-  { src: '', caption: { en: 'Medical supplies delivered to the camp clinic — antibiotics & first-aid kits', ar: 'وصول مستلزمات طبية إلى عيادة المخيم — مضادات حيوية وحقائب إسعاف أولي' }, date: 'May 2026' },
-  { src: '', caption: { en: 'Winter blanket distribution — 200 thermal blankets to families with young children', ar: 'توزيع بطانيات شتوية — ٢٠٠ بطانية حرارية للعائلات التي لديها أطفال صغار' }, date: 'Dec 2025' },
-  { src: '', caption: { en: 'Water trucking: 15,000L of clean drinking water delivered', ar: 'توزيع ١٥٠٠٠ لتر من مياه الشرب النظيفة' }, date: 'Mar 2026' },
+  { src: ['images/bread.jpeg', 'images/bread2.jpeg'], caption: { en: 'Bread distribution to families', ar: 'توزيع الخبز على العائلات' }, date: '26/6/2026' },
+  { src: [], caption: { en: 'Medical supplies delivered to the camp clinic — antibiotics & first-aid kits', ar: 'وصول مستلزمات طبية إلى عيادة المخيم — مضادات حيوية وحقائب إسعاف أولي' }, date: 'May 2026' },
+  { src: ['images/kids-teens guidence lecture .jpeg','images/guide2.jpg'], caption: { en: 'Guidence lecture given to childern and teens by We World ORG staff', ar: 'محاضرة إرشادية مقدمة للأطفال واليافعين من قِبل طاقم منظمة We World' }, date: '29/6/2026' },
+  { src: ['images/water.jpg', 'images/water2.jpg', 'images/water3.jpg'], caption: { en: 'Water trucking: 15,000L of clean drinking water delivered', ar: 'توزيع ١٥٠٠٠ لتر من مياه الشرب النظيفة' }, date: 'Mar 2026' },
 ];
 
 // ================================================================
@@ -174,10 +172,15 @@ function renderGalleries(lang) {
   if (commContainer) {
     commContainer.innerHTML = communityPhotos.map((photo, i) => {
       const caption = photo.caption[lang] || photo.caption.en;
-      const img = photo.src
-        ? `<img src="${photo.src}" alt="${caption}" loading="lazy">`
-        : `<div class="gallery-placeholder" style="background:${placeholderGradient(i)}">${translations[lang]['about-placeholder'] || 'Your Photo'}</div>`;
-      return `<div class="gallery-item" tabindex="0">${img}<div class="gallery-caption">${caption}</div></div>`;
+      const images = Array.isArray(photo.src) ? photo.src : (photo.src ? [photo.src] : []);
+      let img;
+      if (images.length === 0) {
+        img = `<div class="gallery-placeholder" style="background:${placeholderGradient(i)}">${translations[lang]['about-placeholder'] || 'Your Photo'}</div>`;
+      } else {
+        const badge = images.length > 1 ? `<span class="gallery-badge">+${images.length - 1}</span>` : '';
+        img = `<div class="gallery-img-wrap"><img src="${images[0]}" alt="${caption}" loading="lazy">${badge}</div>`;
+      }
+      return `<div class="gallery-item" data-gallery-index="${i}" tabindex="0">${img}<div class="gallery-caption">${caption}</div></div>`;
     }).join('');
   }
 
@@ -186,10 +189,15 @@ function renderGalleries(lang) {
   if (aidContainer) {
     aidContainer.innerHTML = aidDeliveries.map((item, i) => {
       const caption = item.caption[lang] || item.caption.en;
-      const img = item.src
-        ? `<img class="aid-card-img" src="${item.src}" alt="${caption}" loading="lazy">`
-        : `<div class="aid-placeholder" style="background:${placeholderGradient(i + 10)}">${translations[lang]['about-placeholder'] || 'Your Photo'}</div>`;
-      return `<div class="aid-card">${img}<div class="aid-card-body"><span class="aid-card-date">${item.date}</span><p>${caption}</p></div></div>`;
+      const images = Array.isArray(item.src) ? item.src : (item.src ? [item.src] : []);
+      let img;
+      if (images.length === 0) {
+        img = `<div class="aid-placeholder" style="background:${placeholderGradient(i + 10)}">${translations[lang]['about-placeholder'] || 'Your Photo'}</div>`;
+      } else {
+        const badge = images.length > 1 ? `<span class="aid-badge">+${images.length - 1}</span>` : '';
+        img = `<div class="aid-img-wrap"><img class="aid-card-img" src="${images[0]}" alt="${caption}" loading="lazy">${badge}</div>`;
+      }
+      return `<div class="aid-card" data-aid-index="${i}">${img}<div class="aid-card-body"><span class="aid-card-date">${item.date}</span><p>${caption}</p></div></div>`;
     }).join('');
   }
 }
@@ -327,25 +335,129 @@ document.getElementById('langToggle').addEventListener('click', () => {
 (function setupLightbox() {
   const lb = document.createElement('div');
   lb.className = 'lightbox';
-  lb.innerHTML = '<button class="lightbox-close">&times;</button><img alt="">';
+  lb.innerHTML = `
+    <button class="lb-close">&times;</button>
+    <button class="lb-nav lb-prev">&#8249;</button>
+    <div class="lb-slide"><img alt=""><p class="lb-caption"></p></div>
+    <button class="lb-nav lb-next">&#8250;</button>
+    <div class="lb-dots"></div>
+  `;
   document.body.appendChild(lb);
 
-  const lbImg = lb.querySelector('img');
-  const lbClose = lb.querySelector('.lightbox-close');
+  const imgEl = lb.querySelector('img');
+  const captionEl = lb.querySelector('.lb-caption');
+  const dotsEl = lb.querySelector('.lb-dots');
+  const prevBtn = lb.querySelector('.lb-prev');
+  const nextBtn = lb.querySelector('.lb-next');
+  const closeBtn = lb.querySelector('.lb-close');
+
+  let currentImages = [];
+  let currentIndex = 0;
+  let currentCaptions = { en: '', ar: '' };
+
+  function showImage(index) {
+    currentIndex = index;
+    imgEl.src = currentImages[index] || '';
+    const cap = currentCaptions[currentLang] || currentCaptions.en;
+    captionEl.textContent = (currentImages.length > 1 ? `${index + 1}/${currentImages.length} — ` : '') + cap;
+    dotsEl.innerHTML = currentImages.map((_, d) =>
+      `<span class="lb-dot${d === index ? ' active' : ''}" data-index="${d}"></span>`
+    ).join('');
+    prevBtn.style.display = currentImages.length > 1 ? '' : 'none';
+    nextBtn.style.display = currentImages.length > 1 ? '' : 'none';
+  }
 
   document.addEventListener('click', (e) => {
     const item = e.target.closest('.gallery-item');
     if (!item) return;
-    const img = item.querySelector('img');
-    if (!img || !img.src) return;
-    lbImg.src = img.src;
-    lbImg.alt = img.alt || '';
+    const idx = parseInt(item.dataset.galleryIndex);
+    const photo = communityPhotos[idx];
+    if (!photo) return;
+    const images = Array.isArray(photo.src) ? photo.src : (photo.src ? [photo.src] : []);
+    if (images.length === 0) return;
+    currentImages = images;
+    currentCaptions = photo.caption;
+    showImage(0);
     lb.classList.add('open');
   });
 
-  lb.addEventListener('click', () => lb.classList.remove('open'));
-  lbClose.addEventListener('click', (e) => { e.stopPropagation(); lb.classList.remove('open'); });
-  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') lb.classList.remove('open'); });
+  prevBtn.addEventListener('click', (e) => { e.stopPropagation(); showImage((currentIndex - 1 + currentImages.length) % currentImages.length); });
+  nextBtn.addEventListener('click', (e) => { e.stopPropagation(); showImage((currentIndex + 1) % currentImages.length); });
+  dotsEl.addEventListener('click', (e) => { const dot = e.target.closest('.lb-dot'); if (dot) showImage(parseInt(dot.dataset.index)); });
+  closeBtn.addEventListener('click', () => lb.classList.remove('open'));
+  lb.addEventListener('click', (e) => { if (e.target === lb) lb.classList.remove('open'); });
+  document.addEventListener('keydown', (e) => {
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape') lb.classList.remove('open');
+    if (e.key === 'ArrowLeft') showImage((currentIndex - 1 + currentImages.length) % currentImages.length);
+    if (e.key === 'ArrowRight') showImage((currentIndex + 1) % currentImages.length);
+  });
+})();
+
+// ================================================================
+//  AID LIGHTBOX (multi-image)
+// ================================================================
+
+(function setupAidLightbox() {
+  const lb = document.createElement('div');
+  lb.className = 'aid-lb';
+  lb.innerHTML = `
+    <button class="aid-lb-close">&times;</button>
+    <button class="aid-lb-nav aid-lb-prev">&#8249;</button>
+    <div class="aid-lb-slide"><img alt=""><p class="aid-lb-caption"></p></div>
+    <button class="aid-lb-nav aid-lb-next">&#8250;</button>
+    <div class="aid-lb-dots"></div>
+  `;
+  document.body.appendChild(lb);
+
+  const imgEl = lb.querySelector('img');
+  const captionEl = lb.querySelector('.aid-lb-caption');
+  const dotsEl = lb.querySelector('.aid-lb-dots');
+  const prevBtn = lb.querySelector('.aid-lb-prev');
+  const nextBtn = lb.querySelector('.aid-lb-next');
+  const closeBtn = lb.querySelector('.aid-lb-close');
+
+  let currentImages = [];
+  let currentIndex = 0;
+  let currentCaptions = { en: '', ar: '' };
+
+  function showImage(index) {
+    currentIndex = index;
+    imgEl.src = currentImages[index] || '';
+    const cap = currentCaptions[currentLang] || currentCaptions.en;
+    captionEl.textContent = (currentImages.length > 1 ? `${index + 1}/${currentImages.length} — ` : '') + cap;
+    dotsEl.innerHTML = currentImages.map((_, d) =>
+      `<span class="aid-lb-dot${d === index ? ' active' : ''}" data-index="${d}"></span>`
+    ).join('');
+    prevBtn.style.display = currentImages.length > 1 ? '' : 'none';
+    nextBtn.style.display = currentImages.length > 1 ? '' : 'none';
+  }
+
+  document.addEventListener('click', (e) => {
+    const card = e.target.closest('.aid-card');
+    if (!card) return;
+    const idx = parseInt(card.dataset.aidIndex);
+    const item = aidDeliveries[idx];
+    if (!item) return;
+    const images = Array.isArray(item.src) ? item.src : (item.src ? [item.src] : []);
+    if (images.length === 0) return;
+    currentImages = images;
+    currentCaptions = item.caption;
+    showImage(0);
+    lb.classList.add('open');
+  });
+
+  prevBtn.addEventListener('click', (e) => { e.stopPropagation(); showImage((currentIndex - 1 + currentImages.length) % currentImages.length); });
+  nextBtn.addEventListener('click', (e) => { e.stopPropagation(); showImage((currentIndex + 1) % currentImages.length); });
+  dotsEl.addEventListener('click', (e) => { const dot = e.target.closest('.aid-lb-dot'); if (dot) showImage(parseInt(dot.dataset.index)); });
+  closeBtn.addEventListener('click', () => lb.classList.remove('open'));
+  lb.addEventListener('click', (e) => { if (e.target === lb) lb.classList.remove('open'); });
+  document.addEventListener('keydown', (e) => {
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape') lb.classList.remove('open');
+    if (e.key === 'ArrowLeft') showImage((currentIndex - 1 + currentImages.length) % currentImages.length);
+    if (e.key === 'ArrowRight') showImage((currentIndex + 1) % currentImages.length);
+  });
 })();
 
 // ================================================================
@@ -357,8 +469,8 @@ document.getElementById('langToggle').addEventListener('click', () => {
   if (!mapEl || typeof L === 'undefined') return;
 
   // Northwest Syria (general area — adjust coordinates as needed)
-  const lat = 35.93;
-  const lng = 36.76;
+  const lat = 31.3757;
+  const lng = 34.2839;
 
   const map = L.map(mapEl, {
     center: [lat, lng],
