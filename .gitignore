@@ -1,12 +1,10 @@
-# OS files
 .DS_Store
 Thumbs.db
 desktop.ini
-
-# Editor temp files
-*.swp
-*.swo
-*~
-
-# Other projects
+*.log
+node_modules/
+bloodborne/
 bookmarks/
+bookmarks-mobile/
+math-school/
+portfolio_website/
