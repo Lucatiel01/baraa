@@ -22,6 +22,7 @@ const translations = {
     'about-p1':             ' — Al-Bara\'a Camp is home to over 756 displaced people living in Gaza. We are farmers, teachers, artisans, and students — a community that refuses to be defined by displacement. Despite limited resources, we run a tight-knit community. Our goal is simple: survive with dignity and build a future for our children while we wait for peace.',
     'community-title':      'Our Community',
     'community-desc':       'Daily life, resilience, and the spirit of Al-Bara\'a. These are the faces and moments that make our camp a home.',
+    'gallery-more':         'View All (%s)',
     'testimonials-title':   'Voices From the Camp',
     'testimonials-desc':    'What our community says about life at Al-Bara\'a.',
     'aid-title':            'Aid & Transparency',
@@ -71,6 +72,7 @@ const translations = {
     'about-p1':             ' — موطن لأكثر من ٧٥٦ نازحاً في غزة. نحن مزارعون، معلمون، حرفيون، وطلاب — مجتمع يرفض أن يُعرّف بالنزوح. رغم الموارد المحدودة، ندير مجتمعاً متماسكاً. هدفنا بسيط: العيش بكرامة وبناء مستقبل لأطفالنا بينما ننتظر السلام.',
     'community-title':      'مجتمعنا',
     'community-desc':       'الحياة اليومية، الصمود، وروح مخيم البراء. هذه هي الوجوه واللحظات التي تجعل مخيمنا وطناً.',
+    'gallery-more':         'عرض الكل',
     'testimonials-title':   'صوت من المخيم',
     'testimonials-desc':    'ما يقوله مجتمعنا عن الحياة في مخيم البراء.',
     'aid-title':            'المساعدات والشفافية',
@@ -170,7 +172,7 @@ function renderGalleries(lang) {
   // --- Community Gallery ---
   const commContainer = document.getElementById('communityGallery');
   if (commContainer) {
-    commContainer.innerHTML = communityPhotos.map((photo, i) => {
+    const items = communityPhotos.map((photo, i) => {
       const caption = photo.caption[lang] || photo.caption.en;
       const images = Array.isArray(photo.src) ? photo.src : (photo.src ? [photo.src] : []);
       let img;
@@ -180,8 +182,20 @@ function renderGalleries(lang) {
         const badge = images.length > 1 ? `<span class="gallery-badge">+${images.length - 1}</span>` : '';
         img = `<div class="gallery-img-wrap"><img src="${images[0]}" alt="${caption}" loading="lazy">${badge}</div>`;
       }
-      return `<div class="gallery-item" data-gallery-index="${i}" tabindex="0">${img}<div class="gallery-caption">${caption}</div></div>`;
+      return `<div class="gallery-item${i > 1 ? ' gallery-hidden' : ''}" data-gallery-index="${i}" tabindex="0">${img}<div class="gallery-caption">${caption}</div></div>`;
     }).join('');
+    const total = communityPhotos.length;
+    const moreLabel = translations[lang]['gallery-more'] || 'View All';
+    const moreBtn = total > 2 ? `<button class="gallery-more">${moreLabel} (${total})</button>` : '';
+    commContainer.innerHTML = `<div class="gallery-grid-inner">${items}</div>${moreBtn}`;
+    const moreBtns = commContainer.querySelectorAll('.gallery-more');
+    moreBtns.forEach(btn => {
+      btn.onclick = () => {
+        const inner = commContainer.querySelector('.gallery-grid-inner');
+        if (inner) inner.classList.add('expanded');
+        btn.style.display = 'none';
+      };
+    });
   }
 
   // --- Aid & Transparency Tracker ---
@@ -357,7 +371,13 @@ document.getElementById('langToggle').addEventListener('click', () => {
 
   function showImage(index) {
     currentIndex = index;
+    imgEl.classList.add('lb-loading');
     imgEl.src = currentImages[index] || '';
+    // If image is cached, onload might not fire reliably; remove class after a short delay
+    const clearLoad = () => imgEl.classList.remove('lb-loading');
+    imgEl.onload = clearLoad;
+    imgEl.onerror = clearLoad;
+    setTimeout(clearLoad, 3000);
     const cap = currentCaptions[currentLang] || currentCaptions.en;
     captionEl.textContent = (currentImages.length > 1 ? `${index + 1}/${currentImages.length} — ` : '') + cap;
     dotsEl.innerHTML = currentImages.map((_, d) =>
@@ -423,7 +443,12 @@ document.getElementById('langToggle').addEventListener('click', () => {
 
   function showImage(index) {
     currentIndex = index;
+    imgEl.classList.add('lb-loading');
     imgEl.src = currentImages[index] || '';
+    const clearLoad = () => imgEl.classList.remove('lb-loading');
+    imgEl.onload = clearLoad;
+    imgEl.onerror = clearLoad;
+    setTimeout(clearLoad, 3000);
     const cap = currentCaptions[currentLang] || currentCaptions.en;
     captionEl.textContent = (currentImages.length > 1 ? `${index + 1}/${currentImages.length} — ` : '') + cap;
     dotsEl.innerHTML = currentImages.map((_, d) =>

@@ -361,6 +361,26 @@ body {
   left: 8px;
 }
 
+.gallery-grid-inner .gallery-hidden { display: none; }
+.gallery-grid-inner.expanded .gallery-hidden { display: block; }
+
+.gallery-more {
+  display: block;
+  margin: 1rem auto 0;
+  padding: 0.6rem 1.5rem;
+  background: var(--warm);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-family: var(--font);
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.gallery-more:hover { background: var(--warm-hv); }
+
 /* ===== AID GRID ===== */
 .aid-grid {
   display: grid;
@@ -855,6 +875,17 @@ body {
 }
 
 .lb-dot.active { background: #fff; }
+
+.lb-loading {
+  background: #2a2a2a;
+  min-height: 200px;
+  animation: lb-pulse 1s ease-in-out infinite;
+}
+
+@keyframes lb-pulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.7; }
+}
 
 [dir="rtl"] .lb-close {
   right: auto;
