@@ -361,25 +361,7 @@ body {
   left: 8px;
 }
 
-.gallery-grid-inner .gallery-hidden { display: none; }
-.gallery-grid-inner.expanded .gallery-hidden { display: block; }
 
-.gallery-more {
-  display: block;
-  margin: 1rem auto 0;
-  padding: 0.6rem 1.5rem;
-  background: var(--warm);
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  font-family: var(--font);
-  font-size: 0.88rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-
-.gallery-more:hover { background: var(--warm-hv); }
 
 /* ===== AID GRID ===== */
 .aid-grid {
