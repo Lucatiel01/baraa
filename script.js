@@ -49,7 +49,7 @@ const translations = {
     'contact-loc-label':    'Location',
     'contact-loc-value':    'Khan Younis, south of Street 5, 50m in',
     'contact-social-label': 'Follow Us',
-    'footer-tagline':       'Built by the community, for the community.',
+    'footer-tagline':       'Developed by Adam Alamassi, for the community.',
     'map-credit':           'Location: 40m inside the sandy road, after Al-Biko Chalet, opposite Shahd Hall',
   },
   ar: {
@@ -98,7 +98,7 @@ const translations = {
     'contact-loc-label':    'الموقع',
     'contact-loc-value':    'مواصي خانيونس جنوب شارع خمسة ب50 متر',
     'contact-social-label': 'تابعنا',
-    'footer-tagline':       'بُني من قبل المجتمع، لأجل المجتمع.',
+    'footer-tagline':       'تم تطويره من قبل ادم العمصي، لأجل المجتمع.',
     'map-credit':           'الموقع:40 متر داخل الشارع الرملي بعد شاليه البيكو امام صالة شهد',
   },
 };
@@ -111,7 +111,7 @@ const translations = {
 const communityPhotos = [
   { src: ['images/volly.jpg'], caption: { en: 'the youth playing vollyball', ar: 'كرة الطائرة' } },
   { src: ['images/kids.jpg'], caption: { en: 'kids and teens', ar: 'اطفال و شباب' } },
-  { src: [], caption: { en: 'Children playing in the common area', ar: 'أطفال يلعبون في الساحة المشتركة' } },
+  { src: ['images/water com.jpg'], caption: { en: 'water activites', ar:'تعبئة المياه' } },
   { src: [], caption: { en: 'Harvesting olives on the outskirts', ar: 'قطف الزيتون في أطراف المخيم' } },
   { src: [], caption: { en: 'Eid celebration with the whole camp', ar: 'احتفال العيد مع المخيم كاملاً' } },
   { src: [], caption: { en: 'Teenagers at the community library', ar: 'شباب في مكتبة المجتمع' } },
@@ -119,9 +119,10 @@ const communityPhotos = [
 
 const aidDeliveries = [
   { src: ['images/bread.jpeg', 'images/bread2.jpeg'], caption: { en: 'Bread distribution to families', ar: 'توزيع الخبز على العائلات' }, date: '26/6/2026' },
-  { src: [], caption: { en: 'Medical supplies delivered to the camp clinic — antibiotics & first-aid kits', ar: 'وصول مستلزمات طبية إلى عيادة المخيم — مضادات حيوية وحقائب إسعاف أولي' }, date: 'May 2026' },
+  { src: ['images/ready made food .jpg' ,'images/food 2.jpg','images/food3.jpg'], caption: { en: 'ready made lunch boxes distribution', ar: 'توزيع علب ارز و لحمة' }, date: '5/7/2026' },
   { src: ['images/kids-teens guidence lecture .jpeg','images/guide2.jpg'], caption: { en: 'Guidence lecture given to childern and teens by We World ORG staff', ar: 'محاضرة إرشادية مقدمة للأطفال واليافعين من قِبل طاقم منظمة We World' }, date: '29/6/2026' },
-  { src: ['images/water.jpg', 'images/water2.jpg', 'images/water3.jpg'], caption: { en: 'Water trucking: 15,000L of clean drinking water delivered', ar: 'توزيع ١٥٠٠٠ لتر من مياه الشرب النظيفة' }, date: 'Mar 2026' },
+  { src: ['images/water.jpg', 'images/water2.jpg', 'images/water3.jpg'], caption: { en: 'Water trucking: 15,000L of clean drinking water delivered', ar: 'توزيع ١٥٠٠٠ لتر من مياه الشرب النظيفة' }, date: '6/7/2026' },
+  { src: ['images/water 21.jpg', 'images/water 22.jpg','images/water ah.jpg','images/water a.jpgs'], caption: { en: 'water deleivery ', ar: 'توزيع  مياه شرب' }, date: '26/6/2026' },
 ];
 
 // ================================================================
