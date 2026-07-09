@@ -112,9 +112,9 @@ const communityPhotos = [
   { src: ['images/volly.jpg'], caption: { en: 'the youth playing vollyball', ar: 'كرة الطائرة' } },
   { src: ['images/kids.jpg'], caption: { en: 'kids and teens', ar: 'اطفال و شباب' } },
   { src: ['images/water com.jpg'], caption: { en: 'water activites', ar:'تعبئة المياه' } },
-  { src: [], caption: { en: 'Harvesting olives on the outskirts', ar: 'قطف الزيتون في أطراف المخيم' } },
-  { src: [], caption: { en: 'Eid celebration with the whole camp', ar: 'احتفال العيد مع المخيم كاملاً' } },
-  { src: [], caption: { en: 'Teenagers at the community library', ar: 'شباب في مكتبة المجتمع' } },
+  { src: ['images/kids activ.jpg'], caption: { en: 'Kids activities at the camp', ar: 'أنشطة الأطفال في المخيم' } },
+  { src: ['images/kids activ2.jpg'], caption: { en: 'Kids activities at the camp', ar: 'أنشطة الأطفال في المخيم' } },
+  { src: ['images/kids activ3.jpg'], caption: { en: 'Kids activities at the camp', ar: 'أنشطة الأطفال في المخيم' } },
 ];
 
 const aidDeliveries = [
