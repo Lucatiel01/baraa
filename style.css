@@ -273,7 +273,11 @@ body {
   display: block;
   position: relative;
   z-index: 1;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
+
+.about-img-src:hover { transform: scale(1.03); }
 
 .about-img::after {
   content: attr(data-label);

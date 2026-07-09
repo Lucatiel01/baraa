@@ -375,6 +375,14 @@ document.getElementById('langToggle').addEventListener('click', () => {
   }
 
   document.addEventListener('click', (e) => {
+    const aboutImg = e.target.closest('.about-img-src');
+    if (aboutImg) {
+      currentImages = [aboutImg.src];
+      currentCaptions = { en: '', ar: '' };
+      showImage(0);
+      lb.classList.add('open');
+      return;
+    }
     const item = e.target.closest('.gallery-item');
     if (!item) return;
     const idx = parseInt(item.dataset.galleryIndex);
